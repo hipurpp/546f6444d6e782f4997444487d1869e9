@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     
     /// ///
 
-    if(!cible) return message.channel.send("Vous devez mentionner quelqu'un à signaler.").then(message => message.delete(5000));
+    if(!cible) return message.channel.send("Vous devez mentionner quelqu'un de valide à signaler.").then(message => message.delete(5000));
 
     /// /// 
     
