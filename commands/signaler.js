@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let salon = message.guild.channels.find('name', 'signalement');
     message.delete().catch(O_o=>{});
     
-    if ( cible === message.author.username ) return message.channel.send("Impossible.").then(message => message.delete(5000));
+    if ( cible === bot.user ) return message.channel.send("Impossible.").then(message => message.delete(5000));
 
     if(!args[0]) return message.channel.send(`**+signaler <@pseudo> <raison>** \n\n Tout abus du système de signalement sera **sanctionné** ${message.author}`).then(message => message.delete(5000));
     
