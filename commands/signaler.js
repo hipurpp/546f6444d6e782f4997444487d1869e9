@@ -3,7 +3,7 @@ const moment = require("moment");
 
 module.exports.run = async (bot, message, args) => {
     
-    let cible = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    const cible = message.mentions.users.last() === bot.user ? message.mentions.users.first() : message.mentions.users.last();
     let raison = args.slice(1).join(' ');
     let salon = message.guild.channels.find('name', 'signalement');
     message.delete().catch(O_o=>{});
