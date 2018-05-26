@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     
     if (cible === message.author) return message.channel.send("Impossible de signaler un BOT.").then(message => message.delete(5000));
 
-    if(!args[0]) return message.channel.send(`**+signaler <@pseudo> <raison>** \n\n Tout abus du système de signalement sera **sanctionné** ${message.author}`).then(message => message.delete(5000));
+    /// if(!args[0]) return message.channel.send(`**+signaler <@pseudo> <raison>** \n\n Tout abus du système de signalement sera **sanctionné** ${message.author}`).then(message => message.delete(5000));
     
     /// ///
 
