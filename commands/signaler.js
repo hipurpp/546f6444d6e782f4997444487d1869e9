@@ -15,6 +15,10 @@ module.exports.run = async (bot, message, args) => {
     /// if(!args[0]) return message.channel.send(`**+signaler <@pseudo> <raison>** \n\n Tout abus du système de signalement sera **sanctionné** ${message.author}`).then(message => message.delete(5000));
     
     /// ///
+    if(args[0] == "signaler"){
+      message.reply("**+signaler <@pseudo> <raison>** \n\n Tout abus du système de signalement sera **sanctionné**");
+      return;
+    }
 
     if(!cible) return message.channel.send("Vous devez mentionner quelqu'un de valide à signaler.").then(message => message.delete(5000));
 
