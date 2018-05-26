@@ -45,7 +45,7 @@ module.exports.run = async (bot, message, args) => {
       .addField('Raison', raison,true)
       .addField('Envoyé depuis le salon textuel', message.channel)
       .setTimestamp()
-      .setFooter("La POUCAVE");
+      .setFooter("Par Karp");
 
       message.channel.send({embed: {
         color: 8311585,
