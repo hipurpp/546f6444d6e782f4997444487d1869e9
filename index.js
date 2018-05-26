@@ -22,7 +22,7 @@ fs.readdir("./commands/", (err, files) => {
 
   bot.on("ready", async () => {
     console.log(`${bot.user.username} est maintenant en ligne et opérationnel | Démarrage effectué le `+ moment().format('YYYY-MM-DD'));
-    bot.user.setActivity("le peuple | +signaler", {type: "WATCHING"});
+    bot.user.setActivity("Une p'tite bière ? | +signaler", {type: "WATCHING"});
   
   });
 
