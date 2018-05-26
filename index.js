@@ -48,4 +48,4 @@ fs.readdir("./commands/", (err, files) => {
   
   });
   
-  bot.login("NDUwMDIwNzU0NjcxNTM0MDgw.DetKFA.KnwZav7c2zN26n9FKY2D7KTsC_Q");
+  bot.login(process.env.TOKEN);
