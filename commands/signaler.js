@@ -8,12 +8,7 @@ module.exports.run = async (bot, message, args) => {
     let salon = message.guild.channels.find('name', 'signalement');
     message.delete().catch(O_o=>{});
 
-    if(!args[0]) return message.channel.send({embed: {
-      color: 4886754,
-      title: "Information :information_source:",
-      description: `**+signaler <@pseudo> <raison>** \n\n Tout abus du système de signalement sera **sanctionné** ${message.author}`,
-      
-    }}).then(message => message.delete(5000));
+    if(!args[0]) return message.channel.send(`**+signaler <@pseudo> <raison>** \n\n Tout abus du système de signalement sera **sanctionné** ${message.author}`).then(message => message.delete(5000));
     
     /// ///
 
