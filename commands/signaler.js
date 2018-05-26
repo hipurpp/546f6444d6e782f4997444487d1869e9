@@ -12,24 +12,15 @@ module.exports.run = async (bot, message, args) => {
     
     /// ///
 
-    if(!cible) return message.channel.send({embed: {
-      color: 16724812,
-      title: "Vous devez mentionner quelqu'un à signaler.",
-  }}).then(message => message.delete(5000));
+    if(!cible) return message.channel.send("Vous devez mentionner quelqu'un à signaler.").then(message => message.delete(5000));
 
     /// /// 
     
-    if(!raison) return message.channel.send({embed: {
-      color: 16724812,
-      title: "Vous devez saisir une raison.",
-  }}).then(message => message.delete(5000));
+    if(!raison) return message.channel.send("Vous devez saisir une raison.").then(message => message.delete(5000));
 
     /// ///
 
-    if(!salon) return message.channel.send({embed: {
-      color: 16724812,
-      title: "Impossible de trouver le salon de signalement.",
-  }}).then(message => message.delete(5000));
+    if(!salon) return message.channel.send("Impossible de trouver le salon de signalement.").then(message => message.delete(5000));
 
     //////// EMBED ///////
     let embed = new Discord.RichEmbed()
@@ -42,10 +33,7 @@ module.exports.run = async (bot, message, args) => {
       .setTimestamp()
       .setFooter("Par Karp");
 
-      message.channel.send({embed: {
-        color: 8311585,
-        title: `Signalement pour ${cible.id} soumis, nous vous contacterons très prochainement.`,
-    }}).then(message => message.delete(10000));
+      message.channel.send(`Signalement pour ${cible.id} soumis, nous vous contacterons très prochainement.`).then(message => message.delete(10000));
 
       salon.send(embed);
       console.log(`${message.author} à signalé ${cible} le `+ moment().format('YYYY-MM-DD'));
