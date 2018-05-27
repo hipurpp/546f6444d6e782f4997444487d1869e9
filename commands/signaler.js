@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
       .setTimestamp()
       .setFooter("Par Karp");
 
-      message.channel.send(`Signalement pour ${cible.id} soumis, nous vous contacterons très prochainement.`).then(message => message.delete(10000));
+      //message.channel.send(`Signalement pour ${cible.id} soumis, nous vous contacterons très prochainement.`).then(message => message.delete(10000));
 
       salon.send(embed);
       console.log(`${message.author} à signalé ${cible} le `+ moment().format('YYYY-MM-DD'));
