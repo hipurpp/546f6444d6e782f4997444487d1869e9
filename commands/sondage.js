@@ -5,7 +5,7 @@ const config = "387696971462344705";
 
 module.exports.run = async (bot, message, args) => {
 
-    if(message.author.id == config.ownerID)
+    if(message.author.id == ownerID)
     {
         let salon_sondages = message.guild.channels.find('name', 'sondages');
         let args = message.content.split(" ").slice(1);
