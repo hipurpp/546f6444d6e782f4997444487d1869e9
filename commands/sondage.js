@@ -22,8 +22,8 @@ module.exports.run = async (bot, message, args) => {
     
     
         salon_sondages.send(embed).then(function (message) {
-          message.react("👎")
           message.react("👍")
+          message.react("👎")
         }).catch(function() {
           message.channel.send("Err");
          });
