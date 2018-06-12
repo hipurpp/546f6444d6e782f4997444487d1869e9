@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
         let embed = new Discord.RichEmbed()
           .setColor('RANDOM')
           .setAuthor(`Sondage par ${message.author.username}`, "https://image.flaticon.com/icons/png/512/309/309671.png")
-          .addField(contenu, "Répondre avec 👍 ou 👎")
+          .addField(contenu, "Vous devez répondre avec les réactions.")
     
     
         salon_sondages.send(embed).then(function (message) {
