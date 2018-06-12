@@ -1,11 +1,9 @@
 const Discord = require("discord.js");
 const moment = require("moment");
-const config = "387696971462344705";
-
 
 module.exports.run = async (bot, message, args) => {
 
-    if(message.author.id == ownerID)
+    if(message.author.id == "387696971462344705")
     {
         let salon_sondages = message.guild.channels.find('name', 'sondages');
         let args = message.content.split(" ").slice(1);
