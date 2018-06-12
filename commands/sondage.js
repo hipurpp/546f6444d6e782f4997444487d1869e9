@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const moment = require("moment");
-const config = require("./config.json");
+const config = "387696971462344705";
 
 
 module.exports.run = async (bot, message, args) => {
