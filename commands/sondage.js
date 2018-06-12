@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const moment = require("moment");
 const config = require("./config.json");
 
+
 module.exports.run = async (bot, message, args) => {
 
     if(message.author.id == config.ownerID)
