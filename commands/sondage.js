@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
         salon_sondages.send(embed).then(function (message) {
           message.react("1⃣")
           message.react("2⃣")
-          salon_sondages.send("@everyone")
+          salon_sondages.send("<@@everyone>")
         }).catch(function() {
           message.channel.send("Err");
          });
