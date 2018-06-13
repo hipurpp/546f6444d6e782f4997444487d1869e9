@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
     if(message.author.id == "387696971462344705")
     {
         let salon_sondages = message.guild.channels.find('name', 'sondages');
+        let myRole = message.guild.roles.find("name", "@everyone");
         let args = message.content.split(" ").slice(1);
         let contenu = args.join(" ")
         message.delete().catch(O_o=>{});
@@ -20,10 +21,9 @@ module.exports.run = async (bot, message, args) => {
           .setAuthor(`Sondage par ${message.author.username}`, "https://image.flaticon.com/icons/png/512/309/309671.png")
           .addField(contenu, "Vous devez répondre avec les réactions.")
     
-        salon_sondages.send(embed).then(function (message) {
+        salon_sondages.send(embed, myRole).then(function (message) {
           message.react("1⃣")
           message.react("2⃣")
-          salon_sondages.send("<@@everyone>")
         }).catch(function() {
           message.channel.send("Err");
          });
