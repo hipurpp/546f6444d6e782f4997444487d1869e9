@@ -20,8 +20,8 @@ module.exports.run = async (bot, message, args) => {
           .setAuthor(`Sondage par ${message.author.username}`, "https://image.flaticon.com/icons/png/512/309/309671.png")
           .addField(contenu, "Vous devez répondre avec les réactions.")
     
-    
-        salon_sondages.send("@everyone \n" , embed).then(function (message) {
+        salon_sondages.send("@everyone");
+        salon_sondages.send(embed).then(function (message) {
           message.react("1⃣")
           message.react("2⃣")
         }).catch(function() {
