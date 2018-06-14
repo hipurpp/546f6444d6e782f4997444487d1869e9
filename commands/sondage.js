@@ -21,8 +21,8 @@ module.exports.run = async (bot, message, args) => {
           .addField(contenu, "Vous devez répondre avec les réactions.")
     
         salon_sondages.send(embed).then(async function (message) {
-            msg.react("1⃣");
-            msg.react("2⃣");
+            message.react("1⃣");
+            message.react("2⃣");
              await message.channel.send('@everyone');
            });
     
