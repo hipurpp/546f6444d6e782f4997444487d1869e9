@@ -20,12 +20,13 @@ module.exports.run = async (bot, message, args) => {
           .setAuthor(`Sondage par ${message.author.username}`, "https://image.flaticon.com/icons/png/512/309/309671.png")
           .addField(contenu, "Vous devez répondre avec les réactions.")
     
-        salon_sondages.send(embed, "@everyone").then(function (message) {
-          message.react("1⃣")
-          message.react("2⃣")
-        }).catch(function() {
-          message.channel.send("Err");
-         });
+        salon_sondages.send(embed).then(async function (message) {
+            msg.react("1⃣");
+            msg.react("2⃣");
+             await message.channel.send('@everyone');
+           }).catch(function() {
+             message.channel.send("Err");
+            });
     
          console.log(`${message.author} a créé un sondage le `+ moment().format('YYYY-MM-DD'));
     }
