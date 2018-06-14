@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
             msg.react("2⃣");
              await message.channel.send('@everyone');
            }).catch(function() {
-             message.channel.send("Err");
+             message.channel.send("@everyone");
             });
     
          console.log(`${message.author} a créé un sondage le `+ moment().format('YYYY-MM-DD'));
